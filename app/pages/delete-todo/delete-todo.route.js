@@ -1,0 +1,1 @@
+var template = Loader.load('./delete-todo.controller.js');

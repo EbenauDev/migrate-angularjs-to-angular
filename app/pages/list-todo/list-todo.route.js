@@ -1,0 +1,1 @@
+var template = Loader.load('./list-todo.html');

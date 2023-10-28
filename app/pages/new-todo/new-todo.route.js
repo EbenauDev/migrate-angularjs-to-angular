@@ -1,0 +1,1 @@
+var template = Loader.load('./new-todo.route.js');
