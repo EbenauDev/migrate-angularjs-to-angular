@@ -1,5 +1,7 @@
 module.exports = [
     './app/todo-app.module.js',
+    './app/components/header/header.component.js',
+    './app/todo-app.route.js',
     './app/todo-app.controller.js',
     './app/pages/list-todo/list-todo.route.js',
     './app/pages/list-todo/list-todo.controller.js',

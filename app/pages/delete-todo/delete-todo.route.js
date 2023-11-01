@@ -7,8 +7,8 @@
     function Config($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('todo.delete', {
-                url: 'todo-app/edit',
-                template: '@@import ./todo-app.html',
+                url: 'list/delete',
+                template: '@@import app/pages/delete-todo/delete-todo.html',
                 controller: 'TodoAppController',
                 controllerAs: 'vm',
             });

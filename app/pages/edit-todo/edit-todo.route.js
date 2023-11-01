@@ -10,8 +10,8 @@ var template = '@@import ./edit-todo.html';
     function Config($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('todo.edit', {
-                url: 'todo-app/edit',
-                template: '@@import ./todo-app.html',
+                url: 'list/edit',
+                template: '@@import app/pages/edit-todo/edit-todo.html',
                 controller: 'TodoAppController',
                 controllerAs: 'vm',
             });

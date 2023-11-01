@@ -5,10 +5,10 @@
 
     Config.$inject = ['$stateProvider', '$urlRouterProvider'];
     function Config($stateProvider, $urlRouterProvider) {
-        stateProvider
+        $stateProvider
             .state('todo', {
-                url: 'todo-app',
-                template: '@@import ./todo-app.html',
+                url: '/',
+                template: '@@import app/todo-app.html',
                 controller: 'TodoAppController',
                 controllerAs: 'vm',
             });

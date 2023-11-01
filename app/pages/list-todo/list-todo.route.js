@@ -7,8 +7,8 @@
     function Config($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('todo.list', {
-                url: 'todo-app/list',
-                template: '@@import ./list-todo.html',
+                url: 'list',
+                template: '@@import app/pages/list-todo/list-todo.html',
                 controller: 'TodoAppController',
                 controllerAs: 'vm',
             });

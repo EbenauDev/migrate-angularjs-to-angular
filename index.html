@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Migração do AngularJs para o Angular 4</title>
     <!-- inject:css -->
+    <link rel="stylesheet" href="/assets/css/1-main-app.css">
     <!-- endinject -->
 </head>
 
 <body>
+    <header-component></header-component>
+    <section class="main-content">
+        <ui-view></ui-view>
+    </section>
 
     <!-- inject:js -->
+    <script src="/assets/js/1-libs-app.js"></script>
+    <script src="/assets/js/2-main-app.js"></script>
     <!-- endinject -->
 </body>
 

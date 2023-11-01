@@ -1,5 +1,3 @@
-var template = '@@import ./new-todo.html';
-
 (() => {
     angular
         .module('todoApp')
@@ -9,8 +7,8 @@ var template = '@@import ./new-todo.html';
     function Config($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('todo.new', {
-                url: 'todo-app/new',
-                template: '@@import ./new-todo.html',
+                url: 'list/new',
+                template: '@@import app/pages/new-todo/new-todo.html',
                 controller: 'TodoAppController',
                 controllerAs: 'vm',
             });

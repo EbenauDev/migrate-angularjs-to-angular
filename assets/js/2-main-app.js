@@ -1,7 +1,30 @@
 (() => {
     angular
         .module('todoApp', ['ui.router']);
-})
+})();
+(() => {
+    angular
+        .module('todoApp')
+        .component('headerComponent', {
+            template: '<div class="header"><div class="__logo"><span>TODO</span></div><div class="__acoes"><a ui-sref="todo.list">Lista de Tarefas</a></div></div>',
+        })
+})();
+(() => {
+    angular
+        .module('todoApp')
+        .config(Config);
+
+    Config.$inject = ['$stateProvider', '$urlRouterProvider'];
+    function Config($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('todo', {
+                url: '/',
+                template: '<div><h1>TODO APP</h1><ui-view></ui-view></div>',
+                controller: 'TodoAppController',
+                controllerAs: 'vm',
+            });
+    }
+})();
 (() => {
     angular
         .module('todoApp')
@@ -10,6 +33,11 @@
     TodoAppController.$inject = [];
     function TodoAppController() {
         let vm = this;
+        vm.$onInit = activate;
+        
+        function activate() {
+
+        }
     }
 })();
 (() => {
@@ -21,8 +49,8 @@
     function Config($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('todo.list', {
-                url: 'todo-app/list',
-                template: '',
+                url: 'list',
+                template: '<div><h1>LIST TODO FORM</h1></div>',
                 controller: 'TodoAppController',
                 controllerAs: 'vm',
             });
@@ -32,8 +60,6 @@
     angular
         .module('todoApp');
 })();
-var template = '';
-
 (() => {
     angular
         .module('todoApp')
@@ -43,8 +69,8 @@ var template = '';
     function Config($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('todo.new', {
-                url: 'todo-app/new',
-                template: '',
+                url: 'list/new',
+                template: '<div><h1>NEW TODO FORM</h1></div>',
                 controller: 'TodoAppController',
                 controllerAs: 'vm',
             });
@@ -66,8 +92,8 @@ var template = '';
     function Config($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('todo.edit', {
-                url: 'todo-app/edit',
-                template: '',
+                url: 'list/edit',
+                template: '<div><h1>EDIT TODO FORM</h1></div>',
                 controller: 'TodoAppController',
                 controllerAs: 'vm',
             });
@@ -86,8 +112,8 @@ var template = '';
     function Config($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('todo.delete', {
-                url: 'todo-app/edit',
-                template: '',
+                url: 'list/delete',
+                template: '<div><h1>DELETE TODO FORM</h1></div>',
                 controller: 'TodoAppController',
                 controllerAs: 'vm',
             });

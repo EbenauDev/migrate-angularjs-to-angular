@@ -5,7 +5,8 @@
     "angular-ui-router": "0.4.3"
   },
   "scripts": {
-    "start-server": "json-server --watch db.json"
+    "start-server": "json-server --watch db.json",
+    "dev": "yarn gulp dev"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
